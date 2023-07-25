@@ -13,8 +13,14 @@ const UserList = () => {
   }
   
   return (
-    <div>UserList</div>
-  )
-}
+    <ul>
+      {users.map((user) => (
+        <li key={user.login.uuid}>
+          {user.name.first} {user.name.last}
+        </li>
+      ))}
+    </ul>
+  );
+};
 
 export default UserList
