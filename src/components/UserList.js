@@ -16,7 +16,10 @@ const UserList = () => {
     <ul>
       {users.map((user) => (
         <li key={user.login.uuid}>
-          {user.name.first} {user.name.last}
+          <strong>
+            {user.name.first} {user.name.last}
+          </strong>
+          <span> #{user.cell}</span>
         </li>
       ))}
     </ul>
